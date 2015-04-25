@@ -133,11 +133,11 @@ class JugglerFest{
 					circuits[currCircuit]->members.erase(circuits[currCircuit]->members.begin());
 					addJuggler(currCircuit, jNum);
 					jugglers[minJuggler]->allocated = false;
-					checkPreference(minJuggler);
-					break;
+					checkPreference(minJuggler);					
 					if(!jugglers[minJuggler]->allocated){
 						checkAll(minJuggler);
 					}
+					break;
 				}
 				
 			}
@@ -172,11 +172,11 @@ class JugglerFest{
 					circuits[currCircuit]->members.erase(circuits[currCircuit]->members.begin());
 					addJuggler(currCircuit, jNum);
 					jugglers[minJuggler]->allocated = false;
-					checkPreference(minJuggler);
-					break;
+					checkPreference(minJuggler);					
 					if(!jugglers[minJuggler]->allocated){
 						checkAll(minJuggler);
 					}
+					break;
 				}
 				
 			}
