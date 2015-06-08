@@ -15,24 +15,23 @@ int main() {
         sticks.push_back(curr);
     }
     std::sort(sticks.begin(), sticks.end());
-    while(sticks.size() != 0){
-        int min = sticks[0];
-        for(int i = 0; i < sticks.size(); i++){
-            std::cout << sticks[i] << " ";
-        }
-        std::cout << "\nmin in this iteration = " << min << "length left = " << sticks.size() << std::endl;
-        int j = 0;
-        for(auto i = sticks.begin(); i != sticks.end(); i = i++){
-            std::cout << "idx = " << j << "data = " << *i << std::endl;
-            j++;
-            *i -= min;
-            if(*i == 0){
-                sticks.erase(i);
-                if(sticks.size() != 0){
-                i = sticks.begin();    
-                }
+    int left = sticks.size();
+    int count = 1;  //# of sticks with the same length
+    for(int i = 0; i < sticks.size(); i++){
+        if(i != sticks.size() - 1){
+            if(sticks[i] == sticks[i+1]){
+                count++;
             }
-        }   
+            else{
+                std::cout << left << std::endl;
+                left -= count;
+                count = 1;
+            }
+                
+        }
+        else{
+            std::cout << count << std::endl;
+        }
     }
     return 0;
 }
