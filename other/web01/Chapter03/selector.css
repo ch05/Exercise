@@ -1,0 +1,22 @@
+main{
+    width: 500px;
+    margin: auto;
+    background: gray;
+    overflow: auto;
+}
+
+nav{
+    width: 200px;
+    float: right;
+}
+
+nav p{
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    float: left;
+    width: 400px;
+}
